@@ -15,9 +15,9 @@
 // I have also created other katas.Take a look if you enjoyed this kata!
 
 function findMissingLetter(array) {
-    let first = array[0].charCodeAt(0)
-    for (let i = 1; i < array.length; i++) {
-        if (first + i !== array[i].charCodeAt(0)) {
+    let firstChar = array[0].charCodeAt(0);
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].charCodeAt(0) !== firstChar + i) {
             return String.fromCharCode(first + i)
         }
     }
