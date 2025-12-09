@@ -17,3 +17,4 @@ function comparePowers([b1, e1], [b2, e2]) {
     let d = Math.log(b2) * e2 - Math.log(b1) * e1;
     return (d > 0) - (d < 0);
 }
+//ln(a^k)=k⋅ln(a)
