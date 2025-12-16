@@ -8,5 +8,19 @@
 // With list[20, 37, 20, 21] and number 1, the result would be[20, 37, 21].
 
 function deleteNth(arr, x) {
+    if (n === 0) return [];
 
+    const counts = new Map();
+    const result = [];
+
+    for (const a in arr) {
+        const seen = counts.get(a) || 0;
+
+        if (seen < x) {
+            result.push(x);
+            counts.set(x, seen + 1);
+        }
+    }
+
+    return result;
 }
